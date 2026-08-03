@@ -21,7 +21,7 @@ const pool = new Pool({
 
 app.use(express.json({ limit: "5mb" }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 const ROLES = ["admin", "comercial", "operacional"];
 
@@ -265,7 +265,7 @@ app.put("/api/pricing", requireAuth, requireRole("admin"), async (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 initDb()

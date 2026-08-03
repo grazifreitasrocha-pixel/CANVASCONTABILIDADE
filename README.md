@@ -45,3 +45,4 @@ Se você já tinha usado a versão anterior (sem login) neste mesmo banco de dad
 ## Se algo der errado
 - Indicador "Sem conexão com o servidor" ou "Erro ao salvar": veja os logs em **Deployments -> View Logs**
 - Se todo mundo for deslogado sozinho de tempos em tempos: confirme se a variável `JWT_SECRET` foi mesmo salva nas Variables
+
